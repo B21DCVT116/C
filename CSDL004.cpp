@@ -35,5 +35,6 @@ int main(){
             cout<<" ";
             sinh(n);
         }
+        cout<<endl;
     }
 }

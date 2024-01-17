@@ -1,23 +1,22 @@
 #include <bits/stdc++.h>
  using namespace std;
-int isFinal;
-int a[100];
+int isFinal,a[100];
 void khoitao(int n){
-    for(int i=0;i<=n;i++){
-        a[i]=65;
+    for(int i=0;i<n;i++){
+        a[i]=0;
     }
 }
 void sinh(int n){
     int i=n;
-    while(i>=1 && a[i]==66){
-        a[i]=65;
+    while(i>=1 && a[i]==1){
+        a[i]=0;
         i--;
     }
     if(i==0){
         isFinal=0;
     }
     else{
-        a[i]=66;
+        a[i]=1;
     }
 }
 int main(){
@@ -30,9 +29,9 @@ int main(){
         isFinal=1;
         while(isFinal==1){
             for(int i=1;i<=n;i++){
-                cout<<(char)a[i];
+                cout<<a[i]<<" ";
             }
-            cout<<" ";
+            cout<<endl;
             sinh(n);
         }
     }
