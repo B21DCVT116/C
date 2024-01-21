@@ -1,25 +1,37 @@
 #include <bits/stdc++.h>
- using namespace std;
+using namespace std;
 int isFinal;
-string s;
-void sinh(string n){
-    int i=n.size();
-    while(i>=1 && n[i]=="1"){
-        n[i]="0";
-        i--;
-    }
-    if(i!=0){
-        n[i]="1";
-    }
-    s=n;
-}
-int main(){
+int a[100];
+int main()
+{
     int t;
-    cin>>t;
-    while(t--){
-        string n;
-        cin>>n;
-        sinh(n);
-        cout<<s<<endl;
+    cin >> t;
+    while (t--)
+    {
+        string s;
+        cin >> s;
+        int i = s.size() - 1;
+        while (i >= 0 && s[i] == '1')
+        {
+            s[i] = '0';
+            i--;
+        }
+        if (i == -1)
+        {
+            for (int i = 0; i < s.size(); i++)
+            {
+                s[i] = '0';
+            }
+        }
+        else
+        {
+            s[i] = '1';
+        }
+
+        for (int i = 0; i < s.size(); i++)
+        {
+            cout << s[i];
+        }
+        cout << endl;
     }
 }

@@ -3,7 +3,7 @@
 int isFinal;
 int a[100];
 void khoitao(int n){
-    for(int i=0;i<=n;i++){
+    for(int i=1;i<=n;i++){
         a[i]=65;
     }
 }
