@@ -1,14 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-int isFinal;
-int a[100];
+string s;
 int main()
 {
     int t;
     cin >> t;
     while (t--)
     {
-        string s;
+        
         cin >> s;
         int i = s.size() - 1;
         while (i >= 0 && s[i] == '1')
