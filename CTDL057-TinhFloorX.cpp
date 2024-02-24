@@ -1,24 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main(){
   int t;
   cin>>t;
   while(t--){
-    int n;
-    cin>>n;
+    int n,k;
+    cin>>n>>k;
     int a[n];
     for (int i = 0; i < n; i++)
     {
       cin>>a[i];
     }
     sort(a,a+n);
-    for (int i = n-1; i > n/2; i--)
+    int ans=0;
+    for (int i = 0; i < n; i++)
     {
-      cout<<a[i]<<" "<<a[n-i-1]<<" ";
+      if(a[i]<=k && a[i]>=a[ans]) ans=i;
     }
-    if(n%2==0) cout<< a[n/2] <<" "<< a[n/2-1]<<" ";
-    else cout<< a[n/2]<<" ";
-    cout<<endl;
+    if(a[ans]<=k) cout<<ans+1<<endl;
+    else cout<< "-1" <<endl;
   }
 }
